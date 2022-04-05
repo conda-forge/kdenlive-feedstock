@@ -28,8 +28,6 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
   host:
-    - {{ cdt('libudev') }}  # [linux]
-    - {{ cdt('libudev-devel') }}  # [linux]
     - xorg-libxfixes  # [linux]
     - xorg-libxext
     - mlt
@@ -62,7 +60,6 @@ requirements:
     - kconfigwidgets
     - knotifications
   run:
-    - {{ cdt('libudev') }}  # [linux]
     - ecm
     - mlt
     - ffmpeg
