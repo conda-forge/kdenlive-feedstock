@@ -28,6 +28,7 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
   host:
+    - libudev
     - xorg-libxfixes  # [linux]
     - xorg-libxext
     - mlt
