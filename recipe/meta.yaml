@@ -35,7 +35,7 @@ requirements:
     - mlt
     - ecm
     - ffmpeg
-    - qt >=5
+    - qt
     - solid
     - purpose
     - kio
