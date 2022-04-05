@@ -20,8 +20,6 @@ requirements:
     - make
     - cmake
     - extra-cmake-modules
-    - {{ cdt('libudev') }}  # [linux]
-    - {{ cdt('libudev-devel') }}  # [linux]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
