@@ -61,7 +61,6 @@ requirements:
   run:
     - ecm
     - mlt
-    - ffmpeg
 
 test:
   commands:
