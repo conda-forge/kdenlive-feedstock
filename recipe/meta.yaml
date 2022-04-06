@@ -10,32 +10,30 @@ source:
   sha256: 64ab3cf06222b95f021941d8c430c70918c04c3ea988f7ccf5ef87c6b69b4465
 
 build:
-  number: 2
+  number: 3
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - sysroot_linux-64 2.17  # [linux64]
     - make
     - cmake
     - extra-cmake-modules
-    - {{ cdt('libudev') }}  # [linux]
-    - {{ cdt('libudev-devel') }}  # [linux]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
   host:
-    - {{ cdt('libudev') }}  # [linux]
-    - {{ cdt('libudev-devel') }}  # [linux]
+    - libudev
     - xorg-libxfixes  # [linux]
     - xorg-libxext
     - mlt
     - ecm
     - ffmpeg
-    - qt >=5
+    - qt
     - solid
     - purpose
     - kio
@@ -62,10 +60,8 @@ requirements:
     - kconfigwidgets
     - knotifications
   run:
-    - {{ cdt('libudev') }}  # [linux]
     - ecm
     - mlt
-    - ffmpeg
 
 test:
   commands:
